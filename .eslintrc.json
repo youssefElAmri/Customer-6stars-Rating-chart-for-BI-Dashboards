@@ -1,0 +1,46 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@angular-eslint/recommended", // Add Angular-specific rules
+    "plugin:prettier/recommended" // Ensure compatibility with Prettier
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "project": ["tsconfig.json"] // Ensure TypeScript type checking
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "@angular-eslint",
+    "prettier"
+  ],
+  "rules": {
+    // TypeScript Rules
+    "@typescript-eslint/explicit-function-return-type": "off", // Disable for flexibility
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/consistent-type-imports": ["error", { "prefer": "type-imports" }],
+
+    // Angular Rules
+    "@angular-eslint/component-selector": ["error", { "type": "element", "prefix": "app", "style": "kebab-case" }],
+    "@angular-eslint/directive-selector": ["error", { "type": "attribute", "prefix": "app", "style": "camelCase" }],
+
+    // General Rules
+    "quotes": ["error", "single"],
+    "indent": ["error", 2],
+    "brace-style": ["error", "1tbs", { "allowSingleLine": false }],
+    "semi": ["error", "always"],
+    "eqeqeq": ["error", "smart"],
+    "no-console": "warn",
+
+    // Prettier Integration
+    "prettier/prettier": ["error", { "singleQuote": true, "semi": true }]
+  }
+}

@@ -1,0 +1,332 @@
+// Using variables from parent SCSS
+$border-radius: 0.375rem;
+$dropdown-border-color: #e0e0e0;
+$dropdown-bg: #ffffff;
+$dropdown-hover-bg: #f8f9fa;
+$dropdown-focus-border: var(--primary, #6200ee);
+$dropdown-active-bg: rgba(var(--primary-rgb, 98, 0, 238), 0.08);
+$dropdown-active-text: var(--primary, #6200ee);
+$dropdown-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+$dropdown-text: #333333;
+$dropdown-secondary-text: #666666;
+$input-height: 42px;
+$transition-speed: 0.15s;
+
+// Dataset dropdown container
+.dataset-dropdown-container {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.dataset-dropdown-toggle {
+  height: $input-height;
+  border: 1px solid $dropdown-border-color;
+  background-color: $dropdown-bg;
+  border-radius: $border-radius;
+  font-size: 0.875rem;
+  color: $dropdown-text;
+  padding: 0 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  position: relative;
+  line-height: 1.5;
+  
+  &:hover:not(:disabled) {
+    border-color: #c8c8c8;
+    background-color: $dropdown-hover-bg;
+  }
+  
+  &:focus:not(:disabled) {
+    box-shadow: 0 0 0 2px rgba(var(--primary-rgb, 98, 0, 238), 0.15);
+    outline: none;
+  }
+  
+  &:active:not(:disabled) {
+    background-color: $dropdown-hover-bg;
+  }
+  
+  &:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    background-color: #f8f9fa;
+  }
+  
+  .dataset-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: calc($input-height - 14px);
+    display: inline-block;
+  }
+  
+  .spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.15em;
+    vertical-align: middle;
+    margin-top: -2px;
+  }
+  
+  &::after {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    margin-top: -2px;
+  }
+}
+
+// Dropdown menu
+.dataset-dropdown-menu {
+  padding: 0;
+  border: 1px solid $dropdown-border-color;
+  border-radius: $border-radius;
+  box-shadow: $dropdown-shadow;
+  overflow: hidden;
+  max-height: 420px;
+}
+
+// Search box container
+.search-box-container {
+  padding: 0.75rem;
+  border-bottom: 1px solid $dropdown-border-color;
+  background-color: #f9f9f9;
+}
+
+// Search input
+.search-input-wrapper {
+  position: relative;
+  margin-bottom: 0.5rem;
+  
+  .search-input {
+    height: 38px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    border: 1px solid $dropdown-border-color;
+    border-radius: $border-radius;
+    font-size: 0.875rem;
+    width: 100%;
+    transition: border-color $transition-speed ease, box-shadow $transition-speed ease;
+    
+    &:focus {
+      border-color: $dropdown-focus-border;
+      box-shadow: 0 0 0 2px rgba(var(--primary-rgb, 98, 0, 238), 0.15);
+      outline: none;
+    }
+    
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+  }
+  
+  .clear-icon {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    cursor: pointer;
+    
+    &:hover {
+      color: #666;
+    }
+  }
+}
+
+// Sort controls
+.sort-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  
+  .sort-label {
+    color: $dropdown-secondary-text;
+    font-weight: 500;
+  }
+  
+  .sort-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .sort-button {
+    background: none;
+    border: none;
+    color: $dropdown-secondary-text;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    transition: all $transition-speed ease;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: #f0f0f0;
+    }
+    
+    &:active {
+      background-color: #e9ecef;
+    }
+    
+    &.active {
+      background-color: $dropdown-active-bg;
+      color: $dropdown-active-text;
+      font-weight: 500;
+    }
+  }
+}
+
+// Dropdown items container
+.dropdown-items-container {
+  max-height: unset;
+  overflow-y: unset;
+  
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+  }
+}
+
+// Dataset items
+.dataset-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color $transition-speed ease;
+  font-size: 0.875rem;
+  height: 44px;
+  overflow: hidden;
+
+  & > * {
+    flex-shrink: 0;
+  }
+  
+  &:hover {
+    background-color: $dropdown-hover-bg;
+  }
+  
+  &:active {
+    background-color: #e9ecef;
+  }
+  
+  &.active {
+    background-color: $dropdown-active-bg;
+    color: $dropdown-active-text;
+    font-weight: 500;
+    
+    .dataset-date {
+      color: rgba(var(--primary-rgb, 98, 0, 238), 0.7);
+    }
+  }
+  
+  .dataset-name {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 8px;
+  }
+  
+  .dataset-date {
+    color: #666666;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+}
+
+// No results message
+.no-results {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: $dropdown-secondary-text;
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+.virtual-scroll-viewport {
+  height: 320px;
+  width: 100%;
+  overflow-x: hidden;
+  
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+  }
+  
+  &::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+  }
+}
+
+
+::ng-deep {
+  // Bootstrap dropdown custom styling
+  .dropdown-toggle::after {
+    display: inline-block;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    margin-top: -0.1em;
+    transition: transform $transition-speed ease;
+  }
+  
+  .show > .dropdown-toggle::after {
+    transform: rotate(180deg);
+  }
+  
+  // Ensure dropdown items have appropriate colors when active/hover
+  .dropdown-item:hover {
+    background-color: $dropdown-hover-bg;
+  }
+
+  .cdk-virtual-scroll-content-wrapper {
+    width: 100% !important;
+    
+    // Force all dropdown items to respect parent width
+    & > button {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  }
+  
+  .dropdown-item.active,
+  .dropdown-item:active {
+    background-color: $dropdown-active-bg;
+    color: $dropdown-active-text;
+  }
+}

@@ -1,0 +1,21 @@
+declare const _default: {
+    currency: string[];
+    date: string;
+    decimal: string;
+    thousands: string;
+    grouping: number[];
+    dateTime: string;
+    dateSeparator: string;
+    time: string;
+    periods: string[];
+    days: string[];
+    shortDays: string[];
+    months: string[];
+    shortMonths: string[];
+    levels: string[];
+    shortLevels: string[];
+    durationLongSuffix: string[];
+    durationShortSuffix: string[];
+    multi: string[];
+};
+export default _default;

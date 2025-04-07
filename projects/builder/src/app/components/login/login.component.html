@@ -1,0 +1,107 @@
+<div class="login-container">
+  <div class="login-content">
+    <h4 class="title">Please log in to your Luzmo account.</h4>
+    @if (mode === 'login') {
+    <form class="form-log-in"
+      [formGroup]="logInForm"
+      (ngSubmit)="attemptLogin(logInForm.get('email')?.value ?? '', logInForm.get('password')?.value ?? '')">
+      @if (logInForm.get('errorMsg')?.value) {
+      <div class="alert alert-danger">{{ logInForm.get('errorMsg')?.value }}</div>
+      }
+      <div class="form-group">
+        <label for="login-email">Data tenancy region</label>
+        <luzmo-picker class="region-picker"
+          id="region-picker"
+          [value]="region"
+          label="Select your region..."
+          size="m"
+          variant="checkmarks"
+          (change)="onRegionChanged($any($event))">
+        <luzmo-menu-item value="europe">
+          <div class="region-item">
+            <!-- <img class="region-icon" src="assets/images/europe-icon.svg" /> -->
+            <span>Europe</span>
+          </div>
+        </luzmo-menu-item>
+        <luzmo-menu-item value="us">
+          <div class="region-item">
+            <!-- <img class="region-icon" src="assets/images/usa-icon.svg" /> -->
+            <span>United States</span>
+          </div>
+        </luzmo-menu-item>   
+        <luzmo-menu-item value="custom">
+          <span>Custom (private VPC)</span>
+        </luzmo-menu-item>
+      </luzmo-picker>
+      </div>
+      @if (region === 'custom') {
+      <div class="form-group">
+        <label for="login-email">VPC App Server URL</label>
+        <input type="text"
+          autocomplete="off"
+          [value]="vpcAppUrl"
+          (change)="onVpcAppUrlChanged($any($event))"
+          [placeholder]="'https://app.luzmo.com'">
+      </div>
+      <div class="form-group">
+        <label for="login-email">VPC API Host URL</label>
+        <input type="text"
+          autocomplete="off"
+          [value]="vpcApiUrl"
+          (change)="onVpcApiUrlChanged($any($event))"
+          [placeholder]="'https://api.luzmo.com'">
+      </div>
+      }
+      <div class="form-group">
+        <label for="login-email">E-mail</label>
+        <input type="email"
+          formControlName="email"
+          id="login-email"
+          autocomplete="off"
+          [placeholder]="'name@company.com'">
+      </div>
+      <div class="form-group">
+        <label for="login-password">Password</label>
+        <input type="password"
+          formControlName="password"
+          id="login-password"
+          [placeholder]="'Password'">
+      </div>
+      <div class="button-container">
+        <button type="submit"
+          class="btn-primary"
+          value="submit"
+          [disabled]="logInForm.invalid || logInForm.get('busy')?.value">
+          <span class="btn-inner-text">Log in</span>
+        </button>
+      </div>
+    </form>
+    }
+    @else if (mode === '2FA') {
+    <form class="form-2fa"
+      [formGroup]="twoFAForm"
+      (ngSubmit)="submit2FA(logInForm.get('email')?.value ?? '', logInForm.get('password')?.value ?? '', twoFAForm.get('totp')?.value ?? '')">
+      <div class="form-group">
+        <label for="twoFA-totp">Two-factor code</label>
+        <input type="text"
+          autocomplete="off"
+          class="form-control"
+          formControlName="totp"
+          id="twoFA-totp"
+          [maxlength]="6" />
+      </div>
+      <div class="button-container">
+        <button type="button"
+          class="btn-transparent"
+          (click)="cancel2FA()">Cancel</button>
+        <button type="submit"
+          class="btn-primary"
+          value="submit"
+          [disabled]="twoFAForm.invalid || twoFAForm.get('busy')?.value">
+          <span class="btn-inner-text">Log in</span>
+        </button>
+      </div>
+    </form>
+    }
+  </div>
+</div>

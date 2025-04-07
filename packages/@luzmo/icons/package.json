@@ -1,0 +1,54 @@
+{
+  "name": "@luzmo/icons",
+  "version": "0.0.6",
+  "homepage": "https://luzmo.com",
+  "description": "A collection of Luzmo icons and item icons definitions + svg icon markup helper function",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/luzmo-icons.umd.cjs",
+  "module": "./dist/luzmo-icons.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/luzmo-icons.js",
+      "require": "./dist/luzmo-icons.umd.cjs"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build",
+    "release": "npm version patch",
+    "publish": "npm run release && npm run build && npm publish"
+  },
+  "keywords": [
+    "Luzmo",
+    "icons",
+    "chart",
+    "icons"
+  ],
+  "author": "Luzmo",
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-lit": "^1.15.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-unicorn": "^57.0.0",
+    "eslint-plugin-wc": "^2.2.0",
+    "lit-html": "^3.2.1",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.1.1",
+    "vite-plugin-dts": "^4.5.0"
+  },
+  "peerDependencies": {
+    "lit-html": "^3.2.1"
+  }
+}

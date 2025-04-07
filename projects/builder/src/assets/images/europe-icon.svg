@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.0"
+   width="600"
+   height="600"
+   id="svg39"
+   sodipodi:docname="Europe-icon.svg"
+   inkscape:version="1.1 (1:1.1+202106032008+af4d65493e)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs43" />
+  <sodipodi:namedview
+     id="namedview41"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.1983333"
+     inkscape:cx="141.8637"
+     inkscape:cy="299.58275"
+     inkscape:window-width="2488"
+     inkscape:window-height="1403"
+     inkscape:window-x="72"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg39" />
+  <circle
+     cx="300"
+     cy="300"
+     r="300"
+     fill="#039"
+     id="circle2" />
+  <g
+     id="g64"
+     transform="translate(74.6004,-70.281172)">
+    <g
+       id="s"
+       transform="matrix(0.73169403,0,0,0.73169403,225.3996,197.46943)"
+       fill="#ffcc00">
+      <g
+         id="c">
+        <path
+           id="t"
+           d="M 0,-40 V 0 h 20"
+           transform="rotate(18,0,-40)" />
+        <use
+           xlink:href="#t"
+           transform="scale(-1,1)"
+           id="use5"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+      <use
+         xlink:href="#c"
+         transform="rotate(72)"
+         id="use8"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+      <use
+         xlink:href="#c"
+         transform="rotate(144)"
+         id="use10"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+      <use
+         xlink:href="#c"
+         transform="rotate(-144)"
+         id="use12"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+      <use
+         xlink:href="#c"
+         transform="rotate(-72)"
+         id="use14"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+    </g>
+    <use
+       xlink:href="#s"
+       transform="translate(87.803283,23.526819)"
+       id="use17"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       xlink:href="#s"
+       transform="translate(152.07975,87.803283)"
+       id="use19"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       xlink:href="#s"
+       transform="translate(175.60657,175.60657)"
+       id="use21"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       xlink:href="#s"
+       transform="translate(152.07975,263.40985)"
+       id="use23"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       xlink:href="#s"
+       transform="translate(87.803283,327.68631)"
+       id="use25"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       xlink:href="#s"
+       transform="translate(0,351.21313)"
+       id="use27"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       xlink:href="#s"
+       transform="translate(-87.803283,327.68631)"
+       id="use29"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       xlink:href="#s"
+       transform="translate(-152.07975,263.40985)"
+       id="use31"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       xlink:href="#s"
+       transform="translate(-175.60657,175.60657)"
+       id="use33"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       xlink:href="#s"
+       transform="translate(-152.07975,87.803283)"
+       id="use35"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       xlink:href="#s"
+       transform="translate(-87.803283,23.526819)"
+       id="use37"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+  </g>
+</svg>

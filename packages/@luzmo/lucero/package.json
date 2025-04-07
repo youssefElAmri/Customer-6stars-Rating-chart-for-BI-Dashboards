@@ -1,0 +1,45 @@
+{
+  "name": "@luzmo/lucero",
+  "version": "0.0.13",
+  "homepage": "https://luzmo.com",
+  "description": "Lucero - The design system for Luzmo",
+  "type": "module",
+  "main": "./components/index.js",
+  "module": "./components/index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./components/index.js",
+      "require": "./components/index.cjs"
+    },
+    "./picker": {
+      "types": "./components/picker/index.d.ts",
+      "import": "./components/picker/index.js",
+      "require": "./components/picker/index.cjs"
+    },
+    "./progress-circle": {
+      "types": "./components/progress-circle/index.d.ts",
+      "import": "./components/progress-circle/index.js",
+      "require": "./components/progress-circle/index.cjs"
+    },
+    "./utils": {
+      "types": "./utils/index.d.ts",
+      "import": "./components/utils.js",
+      "require": "./components/utils.cjs"
+    }
+  },
+  "keywords": [
+    "Luzmo",
+    "design system",
+    "components",
+    "web components",
+    "lucero",
+    "analytics"
+  ],
+  "customElements": "custom-elements.json",
+  "author": "Luzmo",
+  "publishConfig": {
+    "access": "restricted"
+  }
+}

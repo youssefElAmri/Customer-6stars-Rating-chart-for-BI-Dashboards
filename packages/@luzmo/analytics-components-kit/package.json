@@ -1,0 +1,40 @@
+{
+  "name": "@luzmo/analytics-components-kit",
+  "version": "1.0.1-alpha.13",
+  "type": "module",
+  "main": "./components/index.js",
+  "module": "./components/index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./components/index.js",
+      "require": "./components/index.cjs"
+    },
+    "./draggable-data-item": {
+      "types": "./components/draggable-data-item/index.d.ts",
+      "import": "./components/draggable-data-item/index.js",
+      "require": "./components/draggable-data-item/index.cjs"
+    },
+    "./droppable-slot": {
+      "types": "./components/droppable-slot/index.d.ts",
+      "import": "./components/droppable-slot/index.js",
+      "require": "./components/droppable-slot/index.cjs"
+    },
+    "./utils": {
+      "types": "./utils/index.d.ts",
+      "import": "./components/utils.js",
+      "require": "./components/utils.cjs"
+    }
+  },
+  "keywords": [
+    "Luzmo",
+    "design system",
+    "components",
+    "web components",
+    "lucero",
+    "analytics"
+  ],
+  "author": "Luzmo",
+  "website": "https://luzmo.com"
+}

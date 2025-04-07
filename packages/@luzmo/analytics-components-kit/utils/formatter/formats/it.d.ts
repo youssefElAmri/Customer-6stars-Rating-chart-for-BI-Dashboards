@@ -1,0 +1,54 @@
+declare const _default: {
+    decimal: string;
+    thousands: string;
+    grouping: number[];
+    currency: string[];
+    dateTime: string;
+    date: string;
+    dateSeparator: string;
+    time: string;
+    periods: string[];
+    days: string[];
+    shortDays: string[];
+    months: string[];
+    shortMonths: string[];
+    levels: string[];
+    shortLevels: string[];
+    durationLongSuffix: string[];
+    durationShortSuffix: string[];
+    multi: string[];
+    smartDateFormats: ({
+        key: string;
+        lev1: string;
+        lev2: string;
+        lev3: string;
+        lev4: string;
+        lev5: string;
+        monthType: string;
+        longText: boolean;
+        weekday: boolean;
+        mmdd?: undefined;
+        separator?: undefined;
+    } | {
+        key: string;
+        lev1: string;
+        lev2: string;
+        lev3: string;
+        lev4: string;
+        lev5: string;
+        monthType: string;
+        mmdd: boolean;
+        separator: string;
+        longText?: undefined;
+        weekday?: undefined;
+    })[];
+    smartTimeFormats: {
+        key: string;
+        lev6: string;
+        lev7: string;
+        lev8: string;
+        lev9: string;
+        ampm: boolean;
+    }[];
+};
+export default _default;

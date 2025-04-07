@@ -1,0 +1,1 @@
+{"version":3,"file":"icon-definition.interface.d.ts","sourceRoot":"","sources":["../src/icon-definition.interface.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,cAAc;IAC7B,IAAI,EACA,CAAC,MAAM,EAAE,MAAM,EAAE,MAAM,GAAG,MAAM,EAAE,CAAC,GACnC,CAAC,MAAM,EAAE,MAAM,EAAE,MAAM,GAAG,MAAM,EAAE,EAAE,MAAM,GAAG,MAAM,EAAE,CAAC,CAAC;IAC3D,IAAI,EAAE,MAAM,CAAC;CACd"}

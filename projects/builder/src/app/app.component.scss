@@ -1,0 +1,343 @@
+// Variables for consistent use
+$border-radius: 0.375rem;
+$border-color: var(--border-color);
+$primary-color: var(--primary);
+$font-color: var(--font-color);
+$active-font-color: var(--font-color-active);
+$background-color: var(--background-color);
+$light-bg-color: var(--m50);
+$dark-color: var(--m800);
+
+$dropdown-border-color: #e0e0e0;
+$dropdown-bg: #ffffff;
+$dropdown-hover-bg: #f8f9fa;
+$dropdown-focus-border: var(--primary, #6200ee);
+$dropdown-active-bg: rgba(var(--primary-rgb, 98, 0, 238), 0.08); // Lighter background for active items
+$dropdown-active-text: var(--primary, #6200ee); // Primary color for active text
+$dropdown-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+$dropdown-text: #333333;
+$dropdown-secondary-text: #666666;
+$input-height: 42px; // Increased height
+$icon-size: 16px;
+$transition-speed: 0.15s; // Shortened transition speed
+
+// Bootstrap root variable overrides
+:root {
+  --bs-primary: var(--primary);
+  --bs-primary-rgb: var(--primary-rgb);
+  --bs-font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  
+  // Override Bootstrap button focus shadow
+  --bs-btn-focus-box-shadow: none;
+}
+
+// Main container layout
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.custom-chart-editor {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  background: $background-color;
+  color: $font-color;
+  height: calc(100vh - 30px);
+}
+
+// Header styles
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  height: 30px;
+
+  &-title {
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: $primary-color;
+  }
+
+  &-user-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem;
+  }
+}
+
+// Logout button
+.logout-button {
+  color: $primary-color;
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+
+  &:hover {
+    color: $dark-color;
+  }
+}
+
+// Columns - Common Styles
+.column {
+  margin: 0.5rem;
+  border: 0.0625rem solid $border-color;
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: column;
+
+  &-header {
+    padding: 0.75rem 1rem;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    border-bottom: 0.0625rem solid $border-color;
+    background-color: $light-bg-color;
+
+    &-label {
+      color: $dark-color;
+      font-weight: 500;
+      font-size: 1.125rem;
+      margin: 0;
+    }
+  }
+
+  &-content {
+    padding: 1rem;
+    overflow-y: auto;
+  }
+}
+
+// Left column
+.left-column {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 30px);
+
+  .column-content {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: calc(100% - 30px);
+  }
+
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .column-list {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+}
+
+// Middle column - Chart configuration
+.middle-column {
+  width: 25%;
+
+  .slot-mode-selector {
+    margin-bottom: 1.25rem;
+  }
+
+  .slot-editor {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .query-result {
+    margin-top: 1.25rem;
+
+    .loading-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      luzmo-progress-circle {
+        margin: 1.25rem 0;
+      }
+    }
+
+    .result-header {
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: $active-font-color;
+    }
+
+    .remaining-rows {
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+  }
+}
+
+// Right column - Chart visualization
+.right-column {
+  width: 60%;
+
+  .visualization-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    height: 100%;
+  }
+
+  .chart-container {
+    position: relative;
+    height: 700px;
+    width: 100%;
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    #chartContainer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateZ(0);
+      will-change: transform;
+      border-radius: $border-radius;
+    }
+
+    .chart-loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+  }
+}
+
+// =========================================
+// Validation Error Display
+// =========================================
+.validation-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem;
+  margin: 0.625rem;
+  border-radius: $border-radius;
+  background-color: #fff8f8;
+  border: 0.0625rem solid #ffcdd2;
+  text-align: center;
+
+  .error-icon {
+    font-size: 2.25rem;
+    margin-bottom: 0.625rem;
+  }
+
+  .error-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #d32f2f;
+    margin-bottom: 0.625rem;
+  }
+
+  .error-message {
+    padding: 0.625rem;
+    background-color: #f5f5f5;
+    border-radius: 0.25rem;
+    border: 0.0625rem solid #e0e0e0;
+    color: #333;
+    font-family: monospace;
+    white-space: pre-wrap;
+    text-align: left;
+    width: 100%;
+    max-height: 12.5rem;
+    overflow-y: auto;
+    margin-bottom: 0.625rem;
+  }
+
+  .error-help {
+    color: #555;
+    font-size: 0.875rem;
+  }
+}
+
+// =========================================
+// Global Styles and Widget Loader
+// =========================================
+::ng-deep {
+  .ngx-json-viewer {
+    section {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .segment-key {
+      font-weight: 600;
+    }
+  }
+
+  // IFrame and Widget loader styles
+  .widget-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+
+  // Loader animation
+  .cio-pre-loader {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    border: 0.375rem solid rgba(var(--primary-rgb), 0.2);
+    border-top-color: $primary-color;
+    animation: spin 1s infinite linear;
+
+    &.sm {
+      width: 2rem;
+      height: 2rem;
+      border-width: 0.25rem;
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

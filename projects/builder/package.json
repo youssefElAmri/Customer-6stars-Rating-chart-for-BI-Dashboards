@@ -1,0 +1,14 @@
+{
+  "name": "builder",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development"
+  },
+  "peerDependencies": {
+    "@angular/common": "^19.0.0",
+    "@angular/core": "^19.0.0"
+  },
+  "dependencies": {
+  }
+}

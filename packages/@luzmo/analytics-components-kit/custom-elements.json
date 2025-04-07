@@ -1,0 +1,4183 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/components/display-settings/display-settings.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoDisplaySettings",
+          "members": [
+            {
+              "kind": "field",
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language of the settings interface",
+              "attribute": "language"
+            },
+            {
+              "kind": "field",
+              "name": "contentLanguage",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language to use for locale-aware formatting and labels",
+              "attribute": "content-language"
+            },
+            {
+              "kind": "field",
+              "name": "hideDisplaySettings",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "description": "Whether or not to show the displaySettings. Is used to hide display Settings in cases where there are multiple columns",
+              "attribute": "hide-display-settings"
+            },
+            {
+              "kind": "field",
+              "name": "binningDisabled",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "description": "Whether or not to show the binning in numeric",
+              "attribute": "binning-disabled"
+            },
+            {
+              "kind": "field",
+              "name": "grandTotals",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "description": "Whether or not to show the grand totals",
+              "attribute": "grand-totals"
+            },
+            {
+              "kind": "field",
+              "name": "periodOverPeriod",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "description": "Whether or not to show the period-over-period in numeric",
+              "attribute": "period-over-period"
+            },
+            {
+              "kind": "field",
+              "name": "showRemoveButton",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "description": "Whether or not to show the trash button next to the label",
+              "attribute": "show-remove-button"
+            },
+            {
+              "kind": "field",
+              "name": "slotType",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'numeric'",
+              "description": "The slot type",
+              "attribute": "slot-type"
+            },
+            {
+              "kind": "field",
+              "name": "slotContent",
+              "type": {
+                "text": "any"
+              },
+              "default": "{}",
+              "attribute": "slotContent"
+            },
+            {
+              "kind": "field",
+              "name": "measureColumns",
+              "type": {
+                "text": "any[]"
+              },
+              "default": "[]",
+              "description": "The list of columns that can be used for the rate aggregation",
+              "attribute": "measureColumns"
+            }
+          ],
+          "events": [
+            {
+              "name": "slot-content-changed",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Event that is fired when the slot content is changed"
+            },
+            {
+              "name": "remove-slot-content",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language of the settings interface",
+              "fieldName": "language"
+            },
+            {
+              "name": "content-language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language to use for locale-aware formatting and labels",
+              "fieldName": "contentLanguage"
+            },
+            {
+              "name": "hide-display-settings",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "description": "Whether or not to show the displaySettings. Is used to hide display Settings in cases where there are multiple columns",
+              "fieldName": "hideDisplaySettings"
+            },
+            {
+              "name": "binning-disabled",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "description": "Whether or not to show the binning in numeric",
+              "fieldName": "binningDisabled"
+            },
+            {
+              "name": "grand-totals",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "description": "Whether or not to show the grand totals",
+              "fieldName": "grandTotals"
+            },
+            {
+              "name": "period-over-period",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "description": "Whether or not to show the period-over-period in numeric",
+              "fieldName": "periodOverPeriod"
+            },
+            {
+              "name": "show-remove-button",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "description": "Whether or not to show the trash button next to the label",
+              "fieldName": "showRemoveButton"
+            },
+            {
+              "name": "slot-type",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'numeric'",
+              "description": "The slot type",
+              "fieldName": "slotType"
+            },
+            {
+              "name": "slotContent",
+              "type": {
+                "text": "any"
+              },
+              "default": "{}",
+              "fieldName": "slotContent"
+            },
+            {
+              "name": "measureColumns",
+              "type": {
+                "text": "any[]"
+              },
+              "default": "[]",
+              "description": "The list of columns that can be used for the rate aggregation",
+              "fieldName": "measureColumns"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "'s' | 'm' | 'l' | 'xl'"
+              },
+              "default": "m",
+              "description": "The size of the element",
+              "fieldName": "size"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disable this control. It will not receive focus or events",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When this control is rendered, focus it automatically",
+              "fieldName": "autofocus"
+            },
+            {
+              "name": "tabIndex",
+              "type": {
+                "text": "number"
+              },
+              "description": "The tab index to apply to this control. See general documentation about the tabindex HTML property",
+              "fieldName": "tabIndex"
+            }
+          ],
+          "tagName": "luzmo-display-settings",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoDisplaySettings",
+          "declaration": {
+            "name": "LuzmoDisplaySettings",
+            "module": "src/components/display-settings/display-settings.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/display-settings-binning/display-settings-binning.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoDisplaySettingsBinning",
+          "members": [
+            {
+              "kind": "field",
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language used in the settings",
+              "attribute": "language",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "slotContent",
+              "type": {
+                "text": "any"
+              },
+              "default": "{}",
+              "attribute": "slotContent"
+            }
+          ],
+          "events": [
+            {
+              "name": "slot-content-changed",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Event that is fired when the slot content is changed"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language used in the settings",
+              "fieldName": "language"
+            },
+            {
+              "name": "slotContent",
+              "type": {
+                "text": "any"
+              },
+              "default": "{}",
+              "fieldName": "slotContent"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "'s' | 'm' | 'l' | 'xl'"
+              },
+              "default": "m",
+              "description": "The size of the element",
+              "fieldName": "size"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disable this control. It will not receive focus or events",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When this control is rendered, focus it automatically",
+              "fieldName": "autofocus"
+            },
+            {
+              "name": "tabIndex",
+              "type": {
+                "text": "number"
+              },
+              "description": "The tab index to apply to this control. See general documentation about the tabindex HTML property",
+              "fieldName": "tabIndex"
+            }
+          ],
+          "tagName": "luzmo-display-settings-binning",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoDisplaySettingsBinning",
+          "declaration": {
+            "name": "LuzmoDisplaySettingsBinning",
+            "module": "src/components/display-settings-binning/display-settings-binning.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/display-settings-datetime/display-settings-datetime.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoDisplaySettingsDatetime",
+          "members": [
+            {
+              "kind": "field",
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language of the settings interface",
+              "attribute": "language"
+            },
+            {
+              "kind": "field",
+              "name": "contentLanguage",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language to use for locale-aware formatting",
+              "attribute": "contentLanguage"
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "ElementSize"
+              },
+              "default": "'m'",
+              "attribute": "size"
+            },
+            {
+              "kind": "field",
+              "name": "slotContent",
+              "type": {
+                "text": "any"
+              },
+              "default": "{}",
+              "attribute": "slotContent"
+            }
+          ],
+          "events": [
+            {
+              "description": "Event that is fired when the slot content is changed",
+              "name": "slot-content-changed"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language of the settings interface",
+              "fieldName": "language"
+            },
+            {
+              "name": "contentLanguage",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language to use for locale-aware formatting",
+              "fieldName": "contentLanguage"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "ElementSize"
+              },
+              "default": "'m'",
+              "fieldName": "size"
+            },
+            {
+              "name": "slotContent",
+              "type": {
+                "text": "any"
+              },
+              "default": "{}",
+              "fieldName": "slotContent"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "'s' | 'm' | 'l' | 'xl'"
+              },
+              "default": "m",
+              "description": "The size of the element",
+              "fieldName": "size"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disable this control. It will not receive focus or events",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When this control is rendered, focus it automatically",
+              "fieldName": "autofocus"
+            },
+            {
+              "name": "tabIndex",
+              "type": {
+                "text": "number"
+              },
+              "description": "The tab index to apply to this control. See general documentation about the tabindex HTML property",
+              "fieldName": "tabIndex"
+            }
+          ],
+          "tagName": "luzmo-display-settings-datetime",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoDisplaySettingsDatetime",
+          "declaration": {
+            "name": "LuzmoDisplaySettingsDatetime",
+            "module": "src/components/display-settings-datetime/display-settings-datetime.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/display-settings-grand-totals/display-settings-grand-totals.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoDisplaySettingsGrandTotals",
+          "members": [
+            {
+              "kind": "field",
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language used in the settings",
+              "attribute": "language",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "slotContent",
+              "type": {
+                "text": "any"
+              },
+              "default": "{}",
+              "description": "The slotContent that is passed to the settings",
+              "attribute": "slotContent"
+            }
+          ],
+          "events": [
+            {
+              "name": "slot-content-changed",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Event that is fired when the slot content is changed"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language used in the settings",
+              "fieldName": "language"
+            },
+            {
+              "name": "slotContent",
+              "type": {
+                "text": "any"
+              },
+              "default": "{}",
+              "description": "The slotContent that is passed to the settings",
+              "fieldName": "slotContent"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "'s' | 'm' | 'l' | 'xl'"
+              },
+              "default": "m",
+              "description": "The size of the element",
+              "fieldName": "size"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disable this control. It will not receive focus or events",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When this control is rendered, focus it automatically",
+              "fieldName": "autofocus"
+            },
+            {
+              "name": "tabIndex",
+              "type": {
+                "text": "number"
+              },
+              "description": "The tab index to apply to this control. See general documentation about the tabindex HTML property",
+              "fieldName": "tabIndex"
+            }
+          ],
+          "tagName": "luzmo-display-settings-grand-totals",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoDisplaySettingsGrandTotals",
+          "declaration": {
+            "name": "LuzmoDisplaySettingsGrandTotals",
+            "module": "src/components/display-settings-grand-totals/display-settings-grand-totals.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/display-settings-numeric/display-settings-numeric.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoDisplaySettingsNumeric",
+          "members": [
+            {
+              "kind": "field",
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language used in the settings",
+              "attribute": "language",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "slotContent",
+              "type": {
+                "text": "any"
+              },
+              "default": "{}",
+              "description": "The slotContent that is passed to the settings",
+              "attribute": "slotContent",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "measureColumns",
+              "type": {
+                "text": "any[]"
+              },
+              "default": "[]",
+              "description": "The list of columns that can be used for the rate aggregation",
+              "attribute": "measureColumns"
+            }
+          ],
+          "events": [
+            {
+              "description": "Event that is fired when the slot content is changed",
+              "name": "slot-content-changed"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language used in the settings",
+              "fieldName": "language"
+            },
+            {
+              "name": "slotContent",
+              "type": {
+                "text": "any"
+              },
+              "default": "{}",
+              "description": "The slotContent that is passed to the settings",
+              "fieldName": "slotContent"
+            },
+            {
+              "name": "measureColumns",
+              "type": {
+                "text": "any[]"
+              },
+              "default": "[]",
+              "description": "The list of columns that can be used for the rate aggregation",
+              "fieldName": "measureColumns"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "'s' | 'm' | 'l' | 'xl'"
+              },
+              "default": "m",
+              "description": "The size of the element",
+              "fieldName": "size"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disable this control. It will not receive focus or events",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When this control is rendered, focus it automatically",
+              "fieldName": "autofocus"
+            },
+            {
+              "name": "tabIndex",
+              "type": {
+                "text": "number"
+              },
+              "description": "The tab index to apply to this control. See general documentation about the tabindex HTML property",
+              "fieldName": "tabIndex"
+            }
+          ],
+          "tagName": "luzmo-display-settings-numeric",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoDisplaySettingsNumeric",
+          "declaration": {
+            "name": "LuzmoDisplaySettingsNumeric",
+            "module": "src/components/display-settings-numeric/display-settings-numeric.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/display-settings-numeric/helpers/constants.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "AGGREGATIONS",
+          "type": {
+            "text": "Record<string, () => string>"
+          },
+          "default": "{ sum: () => msg('Sum', { desc: 'Numeric Aggregation option' }), cumulativesum: () => msg('Cumulative sum', { desc: 'Numeric Aggregation option' }), average: () => msg('Average', { desc: 'Numeric Aggregation option' }), weightedaverage: () => msg('Weighted average', { desc: 'Numeric Aggregation option' }), median: () => msg('Median', { desc: 'Numeric Aggregation option' }), count: () => msg('Count', { desc: 'Numeric Aggregation option' }), distinctcount: () => msg('Distinct count', { desc: 'Numeric Aggregation option' }), min: () => msg('Minimum', { desc: 'Numeric Aggregation option' }), max: () => msg('Maximum', { desc: 'Numeric Aggregation option' }), stddev: () => msg('Standard deviation', { desc: 'Numeric Aggregation option' }), rate: () => msg('Rate', { desc: 'Numeric Aggregation option' }) }"
+        },
+        {
+          "kind": "variable",
+          "name": "DISPLAY_AS_LABELS",
+          "type": {
+            "text": "Record<DisplayAsFormatLabel, string>"
+          },
+          "default": "{ general: '123', percentage: '%', scientific: 'SI' }"
+        },
+        {
+          "kind": "variable",
+          "name": "DURATION_FORMATS",
+          "type": {
+            "text": "Record<DurationFormat, () => string>"
+          },
+          "default": "{ time: () => msg('Time', { desc: 'Time format option' }), short: () => msg('Short', { desc: 'Short format option' }), long: () => msg('Long', { desc: 'Long format option' }) }"
+        },
+        {
+          "kind": "variable",
+          "name": "NUMERIC_SEPARATOR_FORMATS",
+          "type": {
+            "text": "Record<\n  NumericSeparatorFormatKeys,\n  {\n    auto: boolean;\n    label: () => string;\n    thousandSeparator?: ',' | '.';\n    decimalSeparator?: ',' | '.';\n  }\n>"
+          },
+          "default": "{ Auto: { auto: true, label: () => msg('Auto', { desc: 'Automatic setting of the option' }) }, '1,000.00': { auto: false, label: () => '1,000.00', thousandSeparator: ',', decimalSeparator: '.' }, '1.000,00': { auto: false, label: () => '1.000,00', thousandSeparator: '.', decimalSeparator: ',' }, '1000.00': { auto: false, label: () => '1000.00', decimalSeparator: '.' }, '1000,00': { auto: false, label: () => '1000,00', decimalSeparator: ',' } }"
+        },
+        {
+          "kind": "variable",
+          "name": "DURATION",
+          "type": {
+            "text": "{ levels: { level: number; label: string }[] }"
+          },
+          "default": "{ levels: [ { level: 1, label: 'years' }, { level: 2, label: 'quarters' }, { level: 3, label: 'months' }, { level: 4, label: 'weeks' }, { level: 5, label: 'days' }, { level: 6, label: 'hours' }, { level: 7, label: 'minutes' }, { level: 8, label: 'seconds' }, { level: 9, label: 'milliseconds' } ] }"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "AGGREGATIONS",
+          "declaration": {
+            "name": "AGGREGATIONS",
+            "module": "src/components/display-settings-numeric/helpers/constants.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "DISPLAY_AS_LABELS",
+          "declaration": {
+            "name": "DISPLAY_AS_LABELS",
+            "module": "src/components/display-settings-numeric/helpers/constants.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "DURATION_FORMATS",
+          "declaration": {
+            "name": "DURATION_FORMATS",
+            "module": "src/components/display-settings-numeric/helpers/constants.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "NUMERIC_SEPARATOR_FORMATS",
+          "declaration": {
+            "name": "NUMERIC_SEPARATOR_FORMATS",
+            "module": "src/components/display-settings-numeric/helpers/constants.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "DURATION",
+          "declaration": {
+            "name": "DURATION",
+            "module": "src/components/display-settings-numeric/helpers/constants.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/display-settings-period-over-period/display-settings-period-over-period.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoDisplaySettingsPeriodOverPeriod",
+          "members": [
+            {
+              "kind": "field",
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language used in the settings",
+              "attribute": "language",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "slotContent",
+              "type": {
+                "text": "any"
+              },
+              "default": "{}",
+              "description": "The slotContent that is passed to the settings"
+            }
+          ],
+          "events": [
+            {
+              "name": "slot-content-changed",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Event that is fired when the slot content is changed"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language used in the settings",
+              "fieldName": "language"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "'s' | 'm' | 'l' | 'xl'"
+              },
+              "default": "m",
+              "description": "The size of the element",
+              "fieldName": "size"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disable this control. It will not receive focus or events",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When this control is rendered, focus it automatically",
+              "fieldName": "autofocus"
+            },
+            {
+              "name": "tabIndex",
+              "type": {
+                "text": "number"
+              },
+              "description": "The tab index to apply to this control. See general documentation about the tabindex HTML property",
+              "fieldName": "tabIndex"
+            }
+          ],
+          "tagName": "luzmo-display-settings-period-over-period",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoDisplaySettingsPeriodOverPeriod",
+          "declaration": {
+            "name": "LuzmoDisplaySettingsPeriodOverPeriod",
+            "module": "src/components/display-settings-period-over-period/display-settings-period-over-period.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/display-settings-period-over-period/helpers/constants.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "PERIOD_OVER_PERIOD_VALUES",
+          "type": {
+            "text": "Record<\n  PeriodOverPeriodType,\n  () => string\n>"
+          },
+          "default": "{ none: () => msg('None', { desc: 'Period option' }), past: () => msg('Past value', { desc: 'Period option' }), absoluteChange: () => msg('Absolute change', { desc: 'Period option' }), percentageChange: () => msg('% change', { desc: 'Period option' }) }"
+        },
+        {
+          "kind": "variable",
+          "name": "LEVEL_LIST",
+          "type": {
+            "text": "array"
+          },
+          "default": "[ { key: 'periods', i18n: () => msg('Periods', { desc: 'Period option' }) }, { key: 'years', i18n: () => msg('Years', { desc: 'Period option' }) }, { key: 'quarters', i18n: () => msg('Quarters', { desc: 'Period option' }) }, { key: 'months', i18n: () => msg('Months', { desc: 'Period option' }) }, { key: 'weeks', i18n: () => msg('Weeks', { desc: 'Period option' }) }, { key: 'days', i18n: () => msg('Days', { desc: 'Period option' }) }, { key: 'hours', i18n: () => msg('Hours', { desc: 'Period option' }) }, { key: 'minutes', i18n: () => msg('Minutes', { desc: 'Period option' }) }, { key: 'seconds', i18n: () => msg('Seconds', { desc: 'Period option' }) } ]"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "PERIOD_OVER_PERIOD_VALUES",
+          "declaration": {
+            "name": "PERIOD_OVER_PERIOD_VALUES",
+            "module": "src/components/display-settings-period-over-period/helpers/constants.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "LEVEL_LIST",
+          "declaration": {
+            "name": "LEVEL_LIST",
+            "module": "src/components/display-settings-period-over-period/helpers/constants.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/draggable-data-item/draggable-data-item.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoDraggableDataItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "'highlight' | 'normal' | undefined"
+              },
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "attribute": "language",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "hideSublevels",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "hide-sublevels",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "hideTypeIcon",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "hide-type-icon",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "label",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "description",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "description",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "data",
+              "type": {
+                "text": "any"
+              },
+              "default": "{}",
+              "attribute": "data"
+            }
+          ],
+          "events": [
+            {
+              "description": "Announces that the draggable data item has been dropped",
+              "name": "data-item-dropped"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "'highlight' | 'normal' | undefined"
+              },
+              "fieldName": "variant"
+            },
+            {
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "fieldName": "language"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "disabled"
+            },
+            {
+              "name": "hide-sublevels",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "hideSublevels"
+            },
+            {
+              "name": "hide-type-icon",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "hideTypeIcon"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "label"
+            },
+            {
+              "name": "description",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "description"
+            },
+            {
+              "name": "data",
+              "type": {
+                "text": "any"
+              },
+              "default": "{}",
+              "fieldName": "data"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "'s' | 'm' | 'l' | 'xl'"
+              },
+              "default": "m",
+              "description": "The size of the element",
+              "fieldName": "size"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disable this control. It will not receive focus or events",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When this control is rendered, focus it automatically",
+              "fieldName": "autofocus"
+            },
+            {
+              "name": "tabIndex",
+              "type": {
+                "text": "number"
+              },
+              "description": "The tab index to apply to this control. See general documentation about the tabindex HTML property",
+              "fieldName": "tabIndex"
+            }
+          ],
+          "tagName": "luzmo-draggable-data-item",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoDraggableDataItem",
+          "declaration": {
+            "name": "LuzmoDraggableDataItem",
+            "module": "src/components/draggable-data-item/draggable-data-item.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/draggable-data-item-level/draggable-data-item-level.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoDraggableDataItemLevel",
+          "members": [
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "'highlight' | 'normal' | undefined"
+              },
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "hideTypeIcon",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "attribute": "hide-type-icon",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "sublevel",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "attribute": "sublevel",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "attribute": "language",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "attribute": "disabled",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "label",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "description",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "description",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "data",
+              "type": {
+                "text": "any"
+              },
+              "default": "{}",
+              "attribute": "data"
+            }
+          ],
+          "events": [
+            {
+              "description": "Announces that the draggable data item has been dropped",
+              "name": "data-item-dropped"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "variant",
+              "type": {
+                "text": "'highlight' | 'normal' | undefined"
+              },
+              "fieldName": "variant"
+            },
+            {
+              "name": "hide-type-icon",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "fieldName": "hideTypeIcon"
+            },
+            {
+              "name": "sublevel",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "fieldName": "sublevel"
+            },
+            {
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "fieldName": "language"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "fieldName": "disabled"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "label"
+            },
+            {
+              "name": "description",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "description"
+            },
+            {
+              "name": "data",
+              "type": {
+                "text": "any"
+              },
+              "default": "{}",
+              "fieldName": "data"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "'s' | 'm' | 'l' | 'xl'"
+              },
+              "default": "m",
+              "description": "The size of the element",
+              "fieldName": "size"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disable this control. It will not receive focus or events",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When this control is rendered, focus it automatically",
+              "fieldName": "autofocus"
+            },
+            {
+              "name": "tabIndex",
+              "type": {
+                "text": "number"
+              },
+              "description": "The tab index to apply to this control. See general documentation about the tabindex HTML property",
+              "fieldName": "tabIndex"
+            }
+          ],
+          "tagName": "luzmo-draggable-data-item-level",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoDraggableDataItemLevel",
+          "declaration": {
+            "name": "LuzmoDraggableDataItemLevel",
+            "module": "src/components/draggable-data-item-level/draggable-data-item-level.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/draggable-data-item-level/helpers/calculate-type-icon.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "calculateIconType",
+          "parameters": [
+            {
+              "name": "size",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "data",
+              "type": {
+                "text": "any"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "calculateIconType",
+          "declaration": {
+            "name": "calculateIconType",
+            "module": "src/components/draggable-data-item-level/helpers/calculate-type-icon.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/draggable-data-item-level/helpers/generate-preview.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "generateDragPreview",
+          "parameters": [
+            {
+              "name": "args",
+              "type": {
+                "text": "any"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "generateDragPreview",
+          "declaration": {
+            "name": "generateDragPreview",
+            "module": "src/components/draggable-data-item-level/helpers/generate-preview.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/droppable-slot/droppable-slot.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoDroppableSlot",
+          "members": [
+            {
+              "kind": "field",
+              "name": "itemType",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "item-type",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "slotName",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "slot-name",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "slotConfiguration",
+              "type": {
+                "text": "any"
+              },
+              "default": "{}",
+              "attribute": "slotConfiguration"
+            },
+            {
+              "kind": "field",
+              "name": "slotContents",
+              "type": {
+                "text": "any"
+              },
+              "default": "[]",
+              "attribute": "slotContents"
+            },
+            {
+              "kind": "field",
+              "name": "label",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "label",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "attribute": "language",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "menu",
+              "type": {
+                "text": "'default' | 'popup' | 'draggable' | 'event-only'"
+              },
+              "default": "'default'",
+              "description": "The type of config interaction",
+              "attribute": "menu",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "placement",
+              "type": {
+                "text": "Placement"
+              },
+              "default": "'bottom-end'",
+              "description": "Placement of the slot menu. Only relevant for 'popup' and 'draggable' menu type",
+              "attribute": "placement",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "hideDelete",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "hide-delete",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "hideConfiguration",
+              "type": {
+                "text": "string | undefined"
+              },
+              "attribute": "hide-configuration",
+              "reflects": true
+            },
+            {
+              "kind": "method",
+              "name": "droppableSlotMarkup"
+            }
+          ],
+          "events": [
+            {
+              "description": "Announces that the slot contents has changed",
+              "name": "slot-contents-changed"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "item-type",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "itemType"
+            },
+            {
+              "name": "slot-name",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "slotName"
+            },
+            {
+              "name": "slotConfiguration",
+              "type": {
+                "text": "any"
+              },
+              "default": "{}",
+              "fieldName": "slotConfiguration"
+            },
+            {
+              "name": "slotContents",
+              "type": {
+                "text": "any"
+              },
+              "default": "[]",
+              "fieldName": "slotContents"
+            },
+            {
+              "name": "label",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "label"
+            },
+            {
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "fieldName": "language"
+            },
+            {
+              "name": "menu",
+              "type": {
+                "text": "'default' | 'popup' | 'draggable' | 'event-only'"
+              },
+              "default": "'default'",
+              "description": "The type of config interaction",
+              "fieldName": "menu"
+            },
+            {
+              "name": "placement",
+              "type": {
+                "text": "Placement"
+              },
+              "default": "'bottom-end'",
+              "description": "Placement of the slot menu. Only relevant for 'popup' and 'draggable' menu type",
+              "fieldName": "placement"
+            },
+            {
+              "name": "hide-delete",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "hideDelete"
+            },
+            {
+              "name": "hide-configuration",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "hideConfiguration"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "'s' | 'm' | 'l' | 'xl'"
+              },
+              "default": "m",
+              "description": "The size of the element",
+              "fieldName": "size"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disable this control. It will not receive focus or events",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When this control is rendered, focus it automatically",
+              "fieldName": "autofocus"
+            },
+            {
+              "name": "tabIndex",
+              "type": {
+                "text": "number"
+              },
+              "description": "The tab index to apply to this control. See general documentation about the tabindex HTML property",
+              "fieldName": "tabIndex"
+            }
+          ],
+          "tagName": "luzmo-droppable-slot",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoDroppableSlot",
+          "declaration": {
+            "name": "LuzmoDroppableSlot",
+            "module": "src/components/droppable-slot/droppable-slot.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/droppable-slot/item-slots-configs/slot-labels.const.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "SLOT_LABELS",
+          "type": {
+            "text": "object"
+          },
+          "default": "{ Category: () => msg('Category', { desc: 'Category label' }), Measure: () => msg('Measure', { desc: 'Measure label' }), Legend: () => msg('Legend', { desc: 'Legend label' }), 'Y-Axis': () => msg('Y-Axis', { desc: 'Y-Axis label' }), 'X-Axis': () => msg('X-Axis', { desc: 'X-Axis label' }), 'Group by': () => msg('Group by', { desc: 'Group by label' }) }"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "SLOT_LABELS",
+          "declaration": {
+            "name": "SLOT_LABELS",
+            "module": "src/components/droppable-slot/item-slots-configs/slot-labels.const.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-item/edit-item.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoEditItem",
+          "members": [
+            {
+              "kind": "field",
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language in which to display the option configuration controls.",
+              "attribute": "language",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "itemType",
+              "type": {
+                "text": "string"
+              },
+              "description": "The item type to load the configuration for. Leave empty if using a custom options configuration.",
+              "attribute": "item-type",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "options",
+              "type": {
+                "text": "any | undefined"
+              },
+              "default": "{}",
+              "description": "The options of the item.",
+              "attribute": "options"
+            },
+            {
+              "kind": "field",
+              "name": "slots",
+              "type": {
+                "text": "any | undefined"
+              },
+              "default": "{}",
+              "description": "The slots of the item.",
+              "attribute": "slots"
+            },
+            {
+              "kind": "field",
+              "name": "theme",
+              "type": {
+                "text": "any | undefined"
+              },
+              "default": "{}",
+              "description": "The theme of the item.",
+              "attribute": "theme"
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "ElementSize"
+              },
+              "default": "'m'",
+              "description": "The size of the edit item component.",
+              "attribute": "size",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "optionsConfiguration",
+              "type": {
+                "text": "any"
+              },
+              "description": "The configuration of the options. Fill in manually if you want to use a custom configuration. Leave empty if using a default configuration and use 'item-type'.",
+              "attribute": "optionsConfiguration"
+            },
+            {
+              "kind": "field",
+              "name": "translations",
+              "type": {
+                "text": "any"
+              },
+              "description": "The translations of the item options configuration.",
+              "attribute": "translations"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language in which to display the option configuration controls.",
+              "fieldName": "language"
+            },
+            {
+              "name": "item-type",
+              "type": {
+                "text": "string"
+              },
+              "description": "The item type to load the configuration for. Leave empty if using a custom options configuration.",
+              "fieldName": "itemType"
+            },
+            {
+              "name": "options",
+              "type": {
+                "text": "any | undefined"
+              },
+              "default": "{}",
+              "description": "The options of the item.",
+              "fieldName": "options"
+            },
+            {
+              "name": "slots",
+              "type": {
+                "text": "any | undefined"
+              },
+              "default": "{}",
+              "description": "The slots of the item.",
+              "fieldName": "slots"
+            },
+            {
+              "name": "theme",
+              "type": {
+                "text": "any | undefined"
+              },
+              "default": "{}",
+              "description": "The theme of the item.",
+              "fieldName": "theme"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "ElementSize"
+              },
+              "default": "'m'",
+              "description": "The size of the edit item component.",
+              "fieldName": "size"
+            },
+            {
+              "name": "optionsConfiguration",
+              "type": {
+                "text": "any"
+              },
+              "description": "The configuration of the options. Fill in manually if you want to use a custom configuration. Leave empty if using a default configuration and use 'item-type'.",
+              "fieldName": "optionsConfiguration"
+            },
+            {
+              "name": "translations",
+              "type": {
+                "text": "any"
+              },
+              "description": "The translations of the item options configuration.",
+              "fieldName": "translations"
+            }
+          ],
+          "superclass": {
+            "name": "LuzmoElement",
+            "package": "@luzmo/lucero/utils"
+          },
+          "tagName": "luzmo-edit-item",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoEditItem",
+          "declaration": {
+            "name": "LuzmoEditItem",
+            "module": "src/components/edit-item/edit-item.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option/edit-option.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoEditOption",
+          "members": [
+            {
+              "kind": "field",
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "attribute": "language",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "itemType",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "item-type",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "optionKey",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "option-key",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "options",
+              "type": {
+                "text": "any | undefined"
+              },
+              "default": "{}",
+              "attribute": "options"
+            },
+            {
+              "kind": "field",
+              "name": "slots",
+              "type": {
+                "text": "any | undefined"
+              },
+              "default": "{}",
+              "attribute": "slots"
+            },
+            {
+              "kind": "field",
+              "name": "theme",
+              "type": {
+                "text": "any | undefined"
+              },
+              "default": "{}",
+              "attribute": "theme"
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "ElementSize"
+              },
+              "default": "'m'",
+              "attribute": "size",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "_controlTypeLoaded",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_itemTypeLoaded",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_languageLoaded",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_optionsConfig",
+              "type": {
+                "text": "any"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_translations",
+              "type": {
+                "text": "any"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "changedOptions"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "fieldName": "language"
+            },
+            {
+              "name": "item-type",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "itemType"
+            },
+            {
+              "name": "option-key",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "optionKey"
+            },
+            {
+              "name": "options",
+              "type": {
+                "text": "any | undefined"
+              },
+              "default": "{}",
+              "fieldName": "options"
+            },
+            {
+              "name": "slots",
+              "type": {
+                "text": "any | undefined"
+              },
+              "default": "{}",
+              "fieldName": "slots"
+            },
+            {
+              "name": "theme",
+              "type": {
+                "text": "any | undefined"
+              },
+              "default": "{}",
+              "fieldName": "theme"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "ElementSize"
+              },
+              "default": "'m'",
+              "fieldName": "size"
+            }
+          ],
+          "superclass": {
+            "name": "LuzmoElement",
+            "package": "@luzmo/lucero/utils"
+          },
+          "tagName": "luzmo-edit-option",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoEditOption",
+          "declaration": {
+            "name": "LuzmoEditOption",
+            "module": "src/components/edit-option/edit-option.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option/helpers/control-markup.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "controlMarkup",
+          "parameters": [
+            {
+              "name": "args",
+              "type": {
+                "text": "ControlMarkupArgs"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "controlMarkup",
+          "declaration": {
+            "name": "controlMarkup",
+            "module": "src/components/edit-option/helpers/control-markup.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option/helpers/generate-callback.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "generateCallback",
+          "parameters": [
+            {
+              "name": "args",
+              "type": {
+                "text": "any"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "generateCallback",
+          "declaration": {
+            "name": "generateCallback",
+            "module": "src/components/edit-option/helpers/generate-callback.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option/helpers/get-control-by-key.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "getControlByKey",
+          "return": {
+            "type": {
+              "text": "any"
+            }
+          },
+          "parameters": [
+            {
+              "name": "key",
+              "type": {
+                "text": "string"
+              }
+            },
+            {
+              "name": "config",
+              "type": {
+                "text": "any[]"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "getControlByKey",
+          "declaration": {
+            "name": "getControlByKey",
+            "module": "src/components/edit-option/helpers/get-control-by-key.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option/helpers/get-extra-label-values.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "getExtraLabelValues",
+          "parameters": [
+            {
+              "name": "args",
+              "type": {
+                "text": "ControlMarkupArgs"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "getExtraLabelValues",
+          "declaration": {
+            "name": "getExtraLabelValues",
+            "module": "src/components/edit-option/helpers/get-extra-label-values.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option/helpers/get-value-by-key.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "getValueByKey",
+          "parameters": [
+            {
+              "name": "options",
+              "type": {
+                "text": "any"
+              }
+            },
+            {
+              "name": "key",
+              "type": {
+                "text": "string"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "getValueByKey",
+          "declaration": {
+            "name": "getValueByKey",
+            "module": "src/components/edit-option/helpers/get-value-by-key.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option/helpers/control-templates/action-button-group-template.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "actionButtonGroupMarkup",
+          "parameters": [
+            {
+              "name": "args",
+              "type": {
+                "text": "ControlMarkupArgs"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "actionButtonGroupMarkup",
+          "declaration": {
+            "name": "actionButtonGroupMarkup",
+            "module": "src/components/edit-option/helpers/control-templates/action-button-group-template.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option/helpers/control-templates/color-picker-template.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "colorPickerMarkup",
+          "parameters": [
+            {
+              "name": "args",
+              "type": {
+                "text": "ControlMarkupArgs"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "colorPickerMarkup",
+          "declaration": {
+            "name": "colorPickerMarkup",
+            "module": "src/components/edit-option/helpers/control-templates/color-picker-template.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option/helpers/control-templates/multi-language-field-template.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "multiLanguageFieldMarkup",
+          "parameters": [
+            {
+              "name": "args",
+              "type": {
+                "text": "ControlMarkupArgs"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "multiLanguageFieldMarkup",
+          "declaration": {
+            "name": "multiLanguageFieldMarkup",
+            "module": "src/components/edit-option/helpers/control-templates/multi-language-field-template.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option/helpers/control-templates/number-field-template.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "numberFieldMarkup",
+          "parameters": [
+            {
+              "name": "args",
+              "type": {
+                "text": "ControlMarkupArgs"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "numberFieldMarkup",
+          "declaration": {
+            "name": "numberFieldMarkup",
+            "module": "src/components/edit-option/helpers/control-templates/number-field-template.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option/helpers/control-templates/picker-template.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "pickerMarkup",
+          "parameters": [
+            {
+              "name": "args",
+              "type": {
+                "text": "ControlMarkupArgs"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "pickerMarkup",
+          "declaration": {
+            "name": "pickerMarkup",
+            "module": "src/components/edit-option/helpers/control-templates/picker-template.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option/helpers/control-templates/position-picker-template.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "positionPickerMarkup",
+          "parameters": [
+            {
+              "name": "args",
+              "type": {
+                "text": "ControlMarkupArgs"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "positionPickerMarkup",
+          "declaration": {
+            "name": "positionPickerMarkup",
+            "module": "src/components/edit-option/helpers/control-templates/position-picker-template.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option/helpers/control-templates/positions-number-field-template.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "positionsNumberFieldMarkup",
+          "parameters": [
+            {
+              "name": "args",
+              "type": {
+                "text": "ControlMarkupArgs"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "positionsNumberFieldMarkup",
+          "declaration": {
+            "name": "positionsNumberFieldMarkup",
+            "module": "src/components/edit-option/helpers/control-templates/positions-number-field-template.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option/helpers/control-templates/radio-button-group.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "radioButtonGroupMarkup",
+          "parameters": [
+            {
+              "name": "args",
+              "type": {
+                "text": "ControlMarkupArgs"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "radioButtonGroupMarkup",
+          "declaration": {
+            "name": "radioButtonGroupMarkup",
+            "module": "src/components/edit-option/helpers/control-templates/radio-button-group.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option/helpers/control-templates/slider-template.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "sliderMarkup",
+          "parameters": [
+            {
+              "name": "args",
+              "type": {
+                "text": "ControlMarkupArgs"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "sliderMarkup",
+          "declaration": {
+            "name": "sliderMarkup",
+            "module": "src/components/edit-option/helpers/control-templates/slider-template.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option/helpers/control-templates/switch-template.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "switchMarkup",
+          "parameters": [
+            {
+              "name": "args",
+              "type": {
+                "text": "ControlMarkupArgs"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "switchMarkup",
+          "declaration": {
+            "name": "switchMarkup",
+            "module": "src/components/edit-option/helpers/control-templates/switch-template.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option/helpers/control-templates/text-field-template.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "textFieldMarkup",
+          "parameters": [
+            {
+              "name": "args",
+              "type": {
+                "text": "ControlMarkupArgs"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "textFieldMarkup",
+          "declaration": {
+            "name": "textFieldMarkup",
+            "module": "src/components/edit-option/helpers/control-templates/text-field-template.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option-action-button-group/edit-option-action-button-group.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoEditOptionActionButtonGroup",
+          "members": [],
+          "events": [
+            {
+              "name": "option-changed",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "values",
+              "type": {
+                "text": "Record<string, ButtonContent>"
+              },
+              "default": "{}",
+              "fieldName": "values"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "selects",
+              "type": {
+                "text": "'single' | 'multiple' | undefined"
+              },
+              "fieldName": "selects"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "[string] | undefined"
+              },
+              "fieldName": "value"
+            },
+            {
+              "name": "default",
+              "type": {
+                "text": "[string] | undefined"
+              },
+              "fieldName": "default"
+            }
+          ],
+          "superclass": {
+            "name": "LuzmoEditOptionBase",
+            "module": "/src/components/edit-option-base/edit-option-base"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoEditOptionActionButtonGroup",
+          "declaration": {
+            "name": "LuzmoEditOptionActionButtonGroup",
+            "module": "src/components/edit-option-action-button-group/edit-option-action-button-group.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option-color-picker/edit-option-color-picker.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoEditOptionColorPicker",
+          "members": [
+            {
+              "kind": "field",
+              "name": "swatches",
+              "type": {
+                "text": "string[]"
+              },
+              "default": "[]",
+              "attribute": "swatches",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "rounding",
+              "type": {
+                "text": "'full' | 'light' | 'none'"
+              },
+              "default": "'full'",
+              "attribute": "rounding",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "shape",
+              "type": {
+                "text": "'circle' | 'rectangle'"
+              },
+              "default": "'circle'",
+              "attribute": "shape",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "debounce",
+              "type": {
+                "text": "number"
+              },
+              "default": "50",
+              "attribute": "debounce",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "debounceTimeout",
+              "type": {
+                "text": "any"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "option-changed",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "placement",
+              "type": {
+                "text": "\"top\" | \"top-start\" | \"top-end\" | \"right\" | \"right-start\" | \"right-end\" | \"bottom\" | \"bottom-start\" | \"bottom-end\" | \"left\" | \"left-start\" | \"left-end\""
+              },
+              "default": "'left-start'",
+              "fieldName": "placement",
+              "attribute": "placement"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "default": "'transparent'",
+              "fieldName": "value"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "noAlphaChannel",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "noAlphaChannel"
+            },
+            {
+              "name": "swatches",
+              "type": {
+                "text": "string[]"
+              },
+              "default": "[]",
+              "fieldName": "swatches"
+            },
+            {
+              "name": "rounding",
+              "type": {
+                "text": "'full' | 'light' | 'none'"
+              },
+              "default": "'full'",
+              "fieldName": "rounding"
+            },
+            {
+              "name": "shape",
+              "type": {
+                "text": "'circle' | 'rectangle'"
+              },
+              "default": "'circle'",
+              "fieldName": "shape"
+            },
+            {
+              "name": "debounce",
+              "type": {
+                "text": "number"
+              },
+              "default": "50",
+              "fieldName": "debounce"
+            }
+          ],
+          "superclass": {
+            "name": "LuzmoEditOptionBase",
+            "module": "/src/components/edit-option-base/edit-option-base"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoEditOptionColorPicker",
+          "declaration": {
+            "name": "LuzmoEditOptionColorPicker",
+            "module": "src/components/edit-option-color-picker/edit-option-color-picker.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option-multi-language-field/edit-option-multi-language-field.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoEditOptionMultiLangField",
+          "members": [
+            {
+              "kind": "field",
+              "name": "debounceTimeout",
+              "type": {
+                "text": "any"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "option-changed",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "Record<string, string>"
+              },
+              "default": "{}",
+              "fieldName": "value"
+            },
+            {
+              "name": "invalid",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "invalid"
+            },
+            {
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "readonly"
+            },
+            {
+              "name": "language",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'en'",
+              "fieldName": "language"
+            },
+            {
+              "name": "placeholder",
+              "type": {
+                "text": "Record<string, string> | undefined"
+              },
+              "fieldName": "placeholder"
+            },
+            {
+              "name": "fromOptionValue",
+              "type": {
+                "text": "(value: any, language: string) => any | undefined"
+              },
+              "fieldName": "fromOptionValue"
+            },
+            {
+              "name": "toOptionValue",
+              "type": {
+                "text": "(value: any, language: string) => any | undefined"
+              },
+              "fieldName": "toOptionValue"
+            },
+            {
+              "name": "debounce",
+              "type": {
+                "text": "number"
+              },
+              "default": "200",
+              "fieldName": "debounce"
+            }
+          ],
+          "superclass": {
+            "name": "LuzmoEditOptionBase",
+            "module": "/src/components/edit-option-base/edit-option-base"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoEditOptionMultiLangField",
+          "declaration": {
+            "name": "LuzmoEditOptionMultiLangField",
+            "module": "src/components/edit-option-multi-language-field/edit-option-multi-language-field.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option-number-field/edit-option-number-field.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoEditOptionNumberField",
+          "members": [
+            {
+              "kind": "field",
+              "name": "debounce",
+              "type": {
+                "text": "number"
+              },
+              "default": "200",
+              "attribute": "debounce",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "debounceTimeout",
+              "type": {
+                "text": "any"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "option-changed",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "min",
+              "type": {
+                "text": "number | undefined"
+              },
+              "fieldName": "min"
+            },
+            {
+              "name": "max",
+              "type": {
+                "text": "number | undefined"
+              },
+              "fieldName": "max"
+            },
+            {
+              "name": "default",
+              "type": {
+                "text": "number | undefined"
+              },
+              "fieldName": "default"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "number | undefined"
+              },
+              "fieldName": "value"
+            },
+            {
+              "name": "step",
+              "type": {
+                "text": "number"
+              },
+              "default": "1",
+              "fieldName": "step"
+            },
+            {
+              "name": "unit",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "unit"
+            },
+            {
+              "name": "debounce",
+              "type": {
+                "text": "number"
+              },
+              "default": "200",
+              "fieldName": "debounce"
+            },
+            {
+              "name": "fromOptionValue",
+              "type": {
+                "text": "(value?: string | number) => number | undefined"
+              },
+              "fieldName": "fromOptionValue"
+            },
+            {
+              "name": "toOptionValue",
+              "type": {
+                "text": "(value?: number) => string | number | any | undefined"
+              },
+              "fieldName": "toOptionValue"
+            }
+          ],
+          "superclass": {
+            "name": "LuzmoEditOptionBase",
+            "module": "/src/components/edit-option-base/edit-option-base"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoEditOptionNumberField",
+          "declaration": {
+            "name": "LuzmoEditOptionNumberField",
+            "module": "src/components/edit-option-number-field/edit-option-number-field.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option-picker/edit-option-picker.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoEditOptionPicker",
+          "members": [],
+          "events": [
+            {
+              "name": "option-changed",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "placement",
+              "type": {
+                "text": "\"top\" | \"top-start\" | \"top-end\" | \"right\" | \"right-start\" | \"right-end\" | \"bottom\" | \"bottom-start\" | \"bottom-end\" | \"left\" | \"left-start\" | \"left-end\""
+              },
+              "default": "'bottom-end'",
+              "fieldName": "placement",
+              "attribute": "placement"
+            },
+            {
+              "name": "values",
+              "type": {
+                "text": "Record<string, string>"
+              },
+              "default": "{}",
+              "fieldName": "values"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "value"
+            },
+            {
+              "name": "fromOptionValue",
+              "type": {
+                "text": "(value: string | number | any) => string | undefined"
+              },
+              "fieldName": "fromOptionValue"
+            },
+            {
+              "name": "toOptionValue",
+              "type": {
+                "text": "(value: string) => string | number | any | undefined"
+              },
+              "fieldName": "toOptionValue"
+            },
+            {
+              "name": "default",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "default"
+            }
+          ],
+          "superclass": {
+            "name": "LuzmoEditOptionBase",
+            "module": "/src/components/edit-option-base/edit-option-base"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoEditOptionPicker",
+          "declaration": {
+            "name": "LuzmoEditOptionPicker",
+            "module": "src/components/edit-option-picker/edit-option-picker.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option-position-picker/edit-option-position-picker.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoEditOptionPositionPicker",
+          "members": [],
+          "events": [
+            {
+              "name": "option-changed",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "value"
+            },
+            {
+              "name": "default-position",
+              "type": {
+                "text": "string"
+              },
+              "default": "'top-right'",
+              "fieldName": "defaultPosition"
+            },
+            {
+              "name": "positions",
+              "type": {
+                "text": "string[] | undefined"
+              },
+              "default": "defaultPositions",
+              "fieldName": "positions"
+            },
+            {
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "readonly"
+            }
+          ],
+          "superclass": {
+            "name": "LuzmoEditOptionBase",
+            "module": "/src/components/edit-option-base/edit-option-base"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoEditOptionPositionPicker",
+          "declaration": {
+            "name": "LuzmoEditOptionPositionPicker",
+            "module": "src/components/edit-option-position-picker/edit-option-position-picker.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option-positions-number-field/edit-option-positions-number-field.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoEditOptionPositionsNumberField",
+          "members": [
+            {
+              "kind": "field",
+              "name": "syncedValue",
+              "type": {
+                "text": "number | undefined"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "debounceTimeout",
+              "type": {
+                "text": "any"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_positions",
+              "type": {
+                "text": "Position[][]"
+              },
+              "default": "[ ['top-left', 'top', 'top-right'], ['left', 'center', 'right'], ['bottom-left', 'bottom', 'bottom-right'] ]"
+            },
+            {
+              "kind": "method",
+              "name": "toggleSync"
+            }
+          ],
+          "events": [
+            {
+              "name": "option-changed",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "positions",
+              "type": {
+                "text": "Position[] | undefined"
+              },
+              "fieldName": "positions"
+            },
+            {
+              "name": "values",
+              "type": {
+                "text": "Record<Position, number | undefined> | undefined"
+              },
+              "fieldName": "values"
+            },
+            {
+              "name": "can-sync",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "default": "true",
+              "fieldName": "canSync"
+            },
+            {
+              "name": "positionConfiguration",
+              "type": {
+                "text": "Record<\n    Position,\n    { min?: number; max?: number; step?: number; default?: number }\n  > | undefined"
+              },
+              "fieldName": "positionConfiguration"
+            },
+            {
+              "name": "invalid",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "invalid"
+            },
+            {
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "readonly"
+            },
+            {
+              "name": "debounce",
+              "type": {
+                "text": "number"
+              },
+              "default": "200",
+              "fieldName": "debounce"
+            },
+            {
+              "name": "sync",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "fieldName": "sync"
+            }
+          ],
+          "superclass": {
+            "name": "LuzmoEditOptionBase",
+            "module": "/src/components/edit-option-base/edit-option-base"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoEditOptionPositionsNumberField",
+          "declaration": {
+            "name": "LuzmoEditOptionPositionsNumberField",
+            "module": "src/components/edit-option-positions-number-field/edit-option-positions-number-field.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option-radio-button-group/edit-option-radio-button-group.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoEditOptionRadioButtonGroup",
+          "members": [
+            {
+              "kind": "field",
+              "name": "debounceTimeout",
+              "type": {
+                "text": "any"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "option-changed",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "values",
+              "type": {
+                "text": "Record<string, string>"
+              },
+              "default": "{}",
+              "fieldName": "values"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "value",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "value"
+            },
+            {
+              "name": "default",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "default"
+            },
+            {
+              "name": "fromOptionValue",
+              "type": {
+                "text": "(value?: string | number | any) => string | undefined"
+              },
+              "fieldName": "fromOptionValue"
+            },
+            {
+              "name": "toOptionValue",
+              "type": {
+                "text": "(value?: string) => string | number | any | undefined"
+              },
+              "fieldName": "toOptionValue"
+            }
+          ],
+          "superclass": {
+            "name": "LuzmoEditOptionBase",
+            "module": "/src/components/edit-option-base/edit-option-base"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoEditOptionRadioButtonGroup",
+          "declaration": {
+            "name": "LuzmoEditOptionRadioButtonGroup",
+            "module": "src/components/edit-option-radio-button-group/edit-option-radio-button-group.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option-slider/edit-option-slider.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoEditOptionSlider",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "attribute": "value",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "default",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "attribute": "default",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "min",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "attribute": "min",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "100",
+              "attribute": "max",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "step",
+              "type": {
+                "text": "number"
+              },
+              "default": "100",
+              "attribute": "step",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "debounce",
+              "type": {
+                "text": "number"
+              },
+              "default": "200",
+              "attribute": "debounce",
+              "reflects": true
+            }
+          ],
+          "events": [
+            {
+              "name": "option-changed",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "fieldName": "value"
+            },
+            {
+              "name": "default",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "fieldName": "default"
+            },
+            {
+              "name": "min",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "fieldName": "min"
+            },
+            {
+              "name": "max",
+              "type": {
+                "text": "number"
+              },
+              "default": "100",
+              "fieldName": "max"
+            },
+            {
+              "name": "step",
+              "type": {
+                "text": "number"
+              },
+              "default": "100",
+              "fieldName": "step"
+            },
+            {
+              "name": "debounce",
+              "type": {
+                "text": "number"
+              },
+              "default": "200",
+              "fieldName": "debounce"
+            },
+            {
+              "name": "fromOptionValue",
+              "type": {
+                "text": "(value?: string | number | any) => number | undefined"
+              },
+              "fieldName": "fromOptionValue"
+            },
+            {
+              "name": "toOptionValue",
+              "type": {
+                "text": "(value?: number) => string | number | any | undefined"
+              },
+              "fieldName": "toOptionValue"
+            }
+          ],
+          "superclass": {
+            "name": "LuzmoEditOptionBase",
+            "module": "/src/components/edit-option-base/edit-option-base"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoEditOptionSlider",
+          "declaration": {
+            "name": "LuzmoEditOptionSlider",
+            "module": "src/components/edit-option-slider/edit-option-slider.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option-switch/edit-option-switch.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoEditOptionSwitch",
+          "members": [
+            {
+              "kind": "field",
+              "name": "value",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "attribute": "value"
+            },
+            {
+              "kind": "field",
+              "name": "default",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "attribute": "default"
+            }
+          ],
+          "events": [
+            {
+              "name": "option-changed",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "fieldName": "value"
+            },
+            {
+              "name": "default",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "fieldName": "default"
+            },
+            {
+              "name": "fromOptionValue",
+              "type": {
+                "text": "(value?: string | number | any) => boolean | undefined"
+              },
+              "fieldName": "fromOptionValue"
+            },
+            {
+              "name": "toOptionValue",
+              "type": {
+                "text": "(value?: boolean) => string | number | any | undefined"
+              },
+              "fieldName": "toOptionValue"
+            }
+          ],
+          "superclass": {
+            "name": "LuzmoEditOptionBase",
+            "module": "/src/components/edit-option-base/edit-option-base"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoEditOptionSwitch",
+          "declaration": {
+            "name": "LuzmoEditOptionSwitch",
+            "module": "src/components/edit-option-switch/edit-option-switch.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/edit-option-text-field/edit-option-text-field.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoEditOptionTextField",
+          "members": [
+            {
+              "kind": "field",
+              "name": "debounceTimeout",
+              "type": {
+                "text": "any"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_previousValue",
+              "type": {
+                "text": "string"
+              },
+              "default": "''"
+            }
+          ],
+          "events": [
+            {
+              "name": "option-changed",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "value",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "value"
+            },
+            {
+              "name": "invalid",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "invalid"
+            },
+            {
+              "name": "readonly",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "readonly"
+            },
+            {
+              "name": "placeholder",
+              "type": {
+                "text": "string | undefined"
+              },
+              "fieldName": "placeholder"
+            },
+            {
+              "name": "debounce",
+              "type": {
+                "text": "number"
+              },
+              "default": "200",
+              "fieldName": "debounce"
+            }
+          ],
+          "superclass": {
+            "name": "LuzmoEditOptionBase",
+            "module": "/src/components/edit-option-base/edit-option-base"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoEditOptionTextField",
+          "declaration": {
+            "name": "LuzmoEditOptionTextField",
+            "module": "src/components/edit-option-text-field/edit-option-text-field.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/slot-menu/slot-menu.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoSlotMenu",
+          "members": [
+            {
+              "kind": "field",
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language of the settings interface",
+              "attribute": "language",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "contentLanguage",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language to use for locale-aware formatting and labels",
+              "attribute": "content-language",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "slotType",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'numeric'",
+              "description": "The slot type",
+              "attribute": "slot-type",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "noDrag",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "description": "Whether to show the drag handle and allow dragging",
+              "attribute": "no-drag",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "noClose",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "description": "Whether to show the close button",
+              "attribute": "no-close",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "type": {
+                "text": "'popup' | 'draggable' | 'default' | undefined"
+              },
+              "default": "'draggable'",
+              "description": "The variant to show",
+              "attribute": "variant",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "noTopMenuLabel",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "description": "Whether to show the top menu label & delete button",
+              "attribute": "no-top-menu-label",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "slotContents",
+              "type": {
+                "text": "any"
+              },
+              "default": "[]",
+              "attribute": "slotContents"
+            },
+            {
+              "kind": "field",
+              "name": "slotContentLabelElement",
+              "type": {
+                "text": "HTMLElement"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "displaySettingsElement",
+              "type": {
+                "text": "LuzmoDisplaySettings"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "slotMenuListElement",
+              "type": {
+                "text": "LuzmoSlotMenuList"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "_slotListData",
+              "type": {
+                "text": "any[]"
+              },
+              "default": "[]"
+            },
+            {
+              "kind": "field",
+              "name": "_slotContents",
+              "type": {
+                "text": "any[]"
+              },
+              "default": "[]"
+            },
+            {
+              "kind": "field",
+              "name": "_currentSlotContent",
+              "type": {
+                "text": "any"
+              },
+              "default": "{}"
+            },
+            {
+              "kind": "field",
+              "name": "_activeIndex",
+              "type": {
+                "text": "number"
+              },
+              "default": "0"
+            },
+            {
+              "kind": "method",
+              "name": "updateContentLabel"
+            },
+            {
+              "kind": "method",
+              "name": "removeSlotContent",
+              "parameters": [
+                {
+                  "name": "index",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "close"
+            },
+            {
+              "kind": "method",
+              "name": "_removeActiveSlotContent"
+            }
+          ],
+          "events": [
+            {
+              "name": "slot-contents-changed",
+              "type": {
+                "text": "CustomEvent"
+              }
+            },
+            {
+              "name": "close",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language of the settings interface",
+              "fieldName": "language"
+            },
+            {
+              "name": "content-language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language to use for locale-aware formatting and labels",
+              "fieldName": "contentLanguage"
+            },
+            {
+              "name": "slot-type",
+              "type": {
+                "text": "string | undefined"
+              },
+              "default": "'numeric'",
+              "description": "The slot type",
+              "fieldName": "slotType"
+            },
+            {
+              "name": "no-drag",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "description": "Whether to show the drag handle and allow dragging",
+              "fieldName": "noDrag"
+            },
+            {
+              "name": "no-close",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "description": "Whether to show the close button",
+              "fieldName": "noClose"
+            },
+            {
+              "name": "variant",
+              "type": {
+                "text": "'popup' | 'draggable' | 'default' | undefined"
+              },
+              "default": "'draggable'",
+              "description": "The variant to show",
+              "fieldName": "variant"
+            },
+            {
+              "name": "no-top-menu-label",
+              "type": {
+                "text": "boolean | undefined"
+              },
+              "description": "Whether to show the top menu label & delete button",
+              "fieldName": "noTopMenuLabel"
+            },
+            {
+              "name": "slotContents",
+              "type": {
+                "text": "any"
+              },
+              "default": "[]",
+              "fieldName": "slotContents"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "'s' | 'm' | 'l' | 'xl'"
+              },
+              "default": "m",
+              "description": "The size of the element",
+              "fieldName": "size"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disable this control. It will not receive focus or events",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When this control is rendered, focus it automatically",
+              "fieldName": "autofocus"
+            },
+            {
+              "name": "tabIndex",
+              "type": {
+                "text": "number"
+              },
+              "description": "The tab index to apply to this control. See general documentation about the tabindex HTML property",
+              "fieldName": "tabIndex"
+            }
+          ],
+          "tagName": "luzmo-slot-menu",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoSlotMenu",
+          "declaration": {
+            "name": "LuzmoSlotMenu",
+            "module": "src/components/slot-menu/slot-menu.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/slot-menu-list/slot-menu-list.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "LuzmoSlotMenuList",
+          "members": [
+            {
+              "kind": "field",
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language of the settings interface",
+              "attribute": "language",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "contentLanguage",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language to use for locale-aware formatting and labels",
+              "attribute": "content-language",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "_draggableSlotContentElements",
+              "type": {
+                "text": "HTMLElement[]"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "slotContents",
+              "type": {
+                "text": "any"
+              },
+              "default": "[]",
+              "attribute": "slotContents"
+            },
+            {
+              "kind": "field",
+              "name": "activeIndex",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "attribute": "activeIndex"
+            },
+            {
+              "kind": "method",
+              "name": "setActiveIndex",
+              "parameters": [
+                {
+                  "name": "index",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "removeSlotContent",
+              "parameters": [
+                {
+                  "name": "index",
+                  "type": {
+                    "text": "number"
+                  }
+                }
+              ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language of the settings interface",
+              "fieldName": "language"
+            },
+            {
+              "name": "content-language",
+              "type": {
+                "text": "string"
+              },
+              "default": "'en'",
+              "description": "The language to use for locale-aware formatting and labels",
+              "fieldName": "contentLanguage"
+            },
+            {
+              "name": "slotContents",
+              "type": {
+                "text": "any"
+              },
+              "default": "[]",
+              "fieldName": "slotContents"
+            },
+            {
+              "name": "activeIndex",
+              "type": {
+                "text": "number"
+              },
+              "default": "0",
+              "fieldName": "activeIndex"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "'s' | 'm' | 'l' | 'xl'"
+              },
+              "default": "m",
+              "description": "The size of the element",
+              "fieldName": "size"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "Disable this control. It will not receive focus or events",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "autofocus",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "description": "When this control is rendered, focus it automatically",
+              "fieldName": "autofocus"
+            },
+            {
+              "name": "tabIndex",
+              "type": {
+                "text": "number"
+              },
+              "description": "The tab index to apply to this control. See general documentation about the tabindex HTML property",
+              "fieldName": "tabIndex"
+            }
+          ],
+          "tagName": "luzmo-slot-menu-list",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "LuzmoSlotMenuList",
+          "declaration": {
+            "name": "LuzmoSlotMenuList",
+            "module": "src/components/slot-menu-list/slot-menu-list.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/droppable-slot/item-slots-configs/slot-labels.const.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "SLOT_LABELS",
+          "type": {
+            "text": "object"
+          },
+          "default": "{ Category: () => msg('Category', { desc: 'Category label' }), Measure: () => msg('Measure', { desc: 'Measure label' }), Legend: () => msg('Legend', { desc: 'Legend label' }), 'Y-Axis': () => msg('Y-Axis', { desc: 'Y-Axis label' }), 'X-Axis': () => msg('X-Axis', { desc: 'X-Axis label' }), 'Group by': () => msg('Group by', { desc: 'Group by label' }) }"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "SLOT_LABELS",
+          "declaration": {
+            "name": "SLOT_LABELS",
+            "module": "src/components/droppable-slot/item-slots-configs/slot-labels.const.ts"
+          }
+        }
+      ]
+    }
+  ]
+}

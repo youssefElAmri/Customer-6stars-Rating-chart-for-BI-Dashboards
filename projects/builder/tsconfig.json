@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/builder",
+    "paths": {
+      "@builder/*": ["./src/app/*"]
+    }
+  },
+  "files": ["src/main.ts"],
+  "include": ["src/**/*.d.ts", "src/**/*.ts", "../custom-chart/utils/types.utils.ts"]
+}
